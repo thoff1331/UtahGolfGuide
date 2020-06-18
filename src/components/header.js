@@ -3,6 +3,7 @@ import { withStyles } from "@material-ui/core";
 import { headerStyles } from "./headerStyles";
 import courseList from './courseData.json'
 import { Link, HashRouter } from "react-router-dom";
+import StatsPage from './statsPage'
 
 class Header extends Component {
     constructor() {
@@ -17,6 +18,7 @@ class Header extends Component {
                     <Link to="/stats">My Stats</Link>
                 </HashRouter>
                 <h6> {courseList.length} Courses Available to You </h6>
+
             </div>
         )
     }

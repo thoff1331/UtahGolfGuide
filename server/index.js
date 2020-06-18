@@ -27,6 +27,24 @@ pool.connect((err, db, done) => {
         })
     }
 })
+app.get('/api/stats', function (request, response) {
+    pool.connect(function (err, db, done) {
+        if (err) {
+            return response.status(400).send(err)
+        }
+        else {
+            db.query('SELECT * FROM golfstats', function (err, table) {
+                if (err) {
+                    return response.status(400).send(err)
+
+                } else {
+                    return response.status(200).send(table.rows)
+                }
+            })
+        }
+    })
+})
+
 app.post('/api/new-round', function (request, response) {
     var date = request.body.date;
     var course = request.body.course;

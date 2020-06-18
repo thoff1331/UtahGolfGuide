@@ -16,5 +16,29 @@ export const statPageStyles = () => ({
             fontSize: "30px",
             textDecoration: "bold"
         }
+    },
+    form: {
+        display: "flex",
+        height: "10vh",
+        alignItems: "center",
+        flexDirection: "column",
+        marginTop: "20vh"
+    },
+    table: {
+        border: "10px solid red",
+        width: "80vw",
+        height: "30vh",
+        backgroundColor: "lightBlue",
+        marginLeft: "10vw"
+    },
+    links: {
+        textDecoration: "none",
+        marginLeft: "2vw",
+        color: "white"
+    },
+    linksOne: {
+        textDecoration: "none",
+        marginLeft: "0vw",
+        color: "white"
     }
 })
