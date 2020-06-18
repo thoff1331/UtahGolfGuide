@@ -5,17 +5,18 @@ import Header from './components/header.js';
 import LandingPage from './components/landingPage';
 import CourseContainer from './components/courseContainer'
 import courses from './components/courseData.json';
-const courseList = courses.courses.map((course) => {
-  return course.name
-})
+import routes from './routes';
+import { HashRouter } from "react-router-dom";
+
+
 class App extends React.Component {
   state = {
-    names: courseList,
+    names: "",
     searchTerm: ''
   }
   componentDidMount() {
     this.setState({
-      names: courseList
+      names: ""
     })
   }
   editSearchTerm = (e) => {
@@ -29,12 +30,9 @@ class App extends React.Component {
 
   render() {
     return (
-      <div style={{ textAlign: 'center', paddingTop: '30vh' }}>
-        <input type='text' value={this.state.searchTerm} onChange={this.editSearchTerm} placeholder='Search for a name!' />
-        <br></br>
-        <h3>These are the important names:</h3>
-        {this.state.searchTerm === '' ? null : <CourseContainer names={this.dynamicSearch()} />}
-      </div>
+      <HashRouter>
+        {routes}
+      </HashRouter>
     );
   }
 }

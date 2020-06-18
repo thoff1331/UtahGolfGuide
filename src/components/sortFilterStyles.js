@@ -14,8 +14,6 @@ export const sortFilterStyles = () => ({
         textAlign: "center",
         border: "1px solid green",
         marginRight: "100px",
-        background: "grey",
-        color: "white",
 
     },
     sortText: {

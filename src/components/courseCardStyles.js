@@ -6,9 +6,9 @@ export const courseCardStyles = () => ({
         flexDirection: "row",
         flexWrap: "wrap",
         width: "60vw",
-        height: "50vh",
+        height: "70vh",
         minheight: "50vh",
-        minWidth: "60vw",
+        border: "4px solid yellow"
     },
     cardContent: {
         justifyContent: "center",
@@ -16,6 +16,7 @@ export const courseCardStyles = () => ({
         flexDirection: "column",
         width: "500px",
         alignItems: "center",
+        minWidth: "60vw",
         "& img": {
             height: "100px",
             width: "200px"

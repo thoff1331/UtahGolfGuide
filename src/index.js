@@ -10,7 +10,7 @@ import LandingPage from './components/landingPage'
 
 ReactDOM.render(
   <Provider store={store}>
-    <LandingPage />
+    <App />
   </Provider>,
   document.getElementById("root")
 );

@@ -49,7 +49,7 @@ export const landingPageStyles = () => ({
       lineHeight: "70px",
       height: "70px",
       width: "calc(100% - 800px)",
-      marginLeft: 80,
+      marginLeft: 0,
       textIndent: "2px",
       outline: "none",
       textAlign: "center",
@@ -62,9 +62,11 @@ export const landingPageStyles = () => ({
   },
   sortFilter: {
     display: "flex",
-    width: "5vw",
+    width: "4vw",
     justifyContent: "center",
-    marginRight: "6vw"
+    marginRight: "6vw",
+    backgroundColor: "green",
+    border: "3px solid white"
   },
   searchResults: {
     display: "none"
@@ -75,7 +77,6 @@ export const landingPageStyles = () => ({
     height: "10vh"
   },
   pageControls: {
-    postion: "absolute",
     display: "flex",
     justifyContent: "center",
     alignItems: "flex-end",
@@ -99,7 +100,12 @@ export const landingPageStyles = () => ({
     "& button": {
       textDecoration: "none",
       outline: "none",
-      border: "none"
+      border: "none",
+      backgroundColor: "#36454f",
+      display: "flex",
+      justifyContent: "center",
+      alignItems: "center",
+      color: "white"
     }
   },
   cardContent: {
@@ -111,6 +117,12 @@ export const landingPageStyles = () => ({
     "& img": {
       height: "100px",
       width: "200px"
+    },
+    "& a": {
+      textDecoration: "none",
+      textDecoration: "underline",
+      color: "white",
+      fontSize: "30px"
     }
   },
   cards: {
@@ -121,8 +133,22 @@ export const landingPageStyles = () => ({
     flexWrap: "wrap",
     width: "80vw",
     marginLeft: "10vw",
-    height: "70vh",
+    height: "95vh",
     minheight: "50vh",
     minWidth: "60vw",
+    marginBottom: "20px"
   },
+  footer: {
+    height: "5vh",
+    width: "100%",
+    alignItems: "center"
+  },
+  clearSearch: {
+    border: "10px solid green",
+    backgroundColor: "green",
+    color: "white",
+    borderRadius: "10%",
+    fontSize: "25px"
+  }
+
 });
