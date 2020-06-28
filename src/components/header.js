@@ -15,7 +15,7 @@ class Header extends Component {
             <div className={classes.header}>
                 <h3>Welcome To The Utah Golf Guide</h3>
                 <HashRouter>
-                    <Link to="/stats">My Stats</Link>
+                    <Link className={classes.links} to="/stats">My Stats</Link>
                 </HashRouter>
                 <h6> {courseList.length} Courses Available to You </h6>
 

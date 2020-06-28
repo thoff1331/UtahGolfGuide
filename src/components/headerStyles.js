@@ -16,5 +16,10 @@ export const headerStyles = () => ({
             fontSize: "30px",
             textDecoration: "bold"
         }
-    }
+    },
+    links: {
+        textDecoration: "underline",
+        marginLeft: "2vw",
+        color: "white"
+    },
 })

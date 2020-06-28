@@ -1,7 +1,7 @@
 import { display } from "@material-ui/system";
 import { EditorFormatAlignCenter } from "material-ui/svg-icons";
 
-export const statPageStyles = () => ({
+export const careerStatsStyles = () => ({
     header: {
         height: "18vh",
         width: "100vw",
@@ -12,6 +12,7 @@ export const statPageStyles = () => ({
         alignItems: "Center",
         fontSize: "34px",
         textDecoration: "bold",
+        marginBottom: "10vh",
         color: "gold",
         "& h5": {
             fontSize: "30px",
@@ -52,6 +53,7 @@ export const statPageStyles = () => ({
         height: "10vh",
         backgroundColor: "lightBlue",
         marginLeft: "10vw",
+        marginTop: "0vh",
         "& TableCell": {
             height: "15px"
         }
@@ -81,13 +83,11 @@ export const statPageStyles = () => ({
     addNewScoreButton: {
         display: "flex",
         justifyContent: "center",
-        width: "100%",
         "& Button": {
             marginTop: "3vh",
             marginBottom: "3vh",
             color: "black",
-            backgroundColor: "yellow",
-            marginLeft: "1vw"
+            backgroundColor: "white"
         }
     },
     noStatsFound: {
@@ -95,5 +95,12 @@ export const statPageStyles = () => ({
         display: "flex",
         justifyContent: "center",
         fontSize: "28px"
+    },
+    tcr: {
+        position: "relative",
+        right: "5vw",
+        top: "10vh",
+        display: "flex",
+        justifyContent: "center"
     }
 })

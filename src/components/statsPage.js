@@ -98,11 +98,15 @@ class StatsPage extends Component {
                             </HashRouter>
                         </div>
                     </div>
-                    <Button onClick={this.newScoreButton}>Add New Score</Button>
+                    <div className={classes.addNewScoreButton}>
+                        <Button onClick={this.newScoreButton}>Add New Score</Button>
+                        <Button>Delete All Rounds</Button>
+                    </div>
                     <TableContainer>
                         <Table className={classes.table}>
                             <TableHead>
                                 <TableRow>
+                                    <TableCell>Delete</TableCell>
                                     <TableCell>Date</TableCell>
                                     <TableCell>Course</TableCell>
                                     <TableCell>Score</TableCell>
@@ -115,8 +119,9 @@ class StatsPage extends Component {
                             <TableBody>
                                 {this.state.stats.map((round) => (
                                     <TableRow>
+                                        <button>Delete</button>
                                         <TableCell>{round.date.split("T")[0]}</TableCell>
-                                        <TableCell>{round.course}</TableCell><p>X</p>
+                                        <TableCell>{round.course}</TableCell>
                                         <TableCell>{round.score}</TableCell>
                                         <TableCell>{round.relation}</TableCell>
                                         <TableCell>{round.fairways}</TableCell>
@@ -129,7 +134,12 @@ class StatsPage extends Component {
 
 
                     </TableContainer>
+                    <div className={classes.noStatsFound}>{!this.state.stats[0] ?
+                        <h1>NO STATS FOUND...</h1> : null}
+                    </div>
                 </div >
+
+
             )
         } else {
             return (
@@ -140,21 +150,28 @@ class StatsPage extends Component {
                             <Link to="/">Course Search</Link>
                         </HashRouter>
                     </div>
-                    <div>
+                    <div className={classes.formContainer}>
                         <form ref="statsForm" className={classes.form}>
+                            <label>Date</label>
                             <DatePicker
                                 onChange={this.handleChange}
                                 selected={this.state.startDate}
                                 type='text'
                                 ref='date'
                                 placeholder='Date' />
+                            <label>Course</label>
                             <input type='text' ref='course' placeholder='Course Name'></input>
+                            <label>Score</label>
                             <input type='text' ref='score' placeholder='Score'></input>
+                            <label>Plus/Minus</label>
                             <input type='text' ref='relation' placeholder='Plus/Minus'></input>
+                            <label>Fairways Hit</label>
                             <input type='text' ref='fairways' placeholder='Fairways Hit'></input>
+                            <label>Greens Hit</label>
                             <input type='text' ref='greens' placeholder='Greens'></input>
+                            <label>Putts</label>
                             <input type='text' ref='putts' placeholder='Putts'></input>
-                            <div>
+                            <div className={classes.statsButtons}>
                                 <Button onClick={this.backToStatsButton}>BacktoStats</Button>
                                 <Button onClick={this.addScore}>Add Round</Button>
                             </div>
